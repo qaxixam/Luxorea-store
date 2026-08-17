@@ -1,133 +1,326 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FixIt Store</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
+    <title>Luxora Store</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- TOP BAR -->
 
-<body>
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo">
-            <a href="All_Product.html">
-                <img src="assets/logo.png" alt="Logo" />
-            </a>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="/index.html" class="logo">
+          <span class="logo-diamond">◆</span>
+          <span class="logo-text">LUXORA<small>STORE</small></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="WomenClothes.html">Female</a>
+
+          <a href="/jewelery.html">Jewelery</a>
+          <a href="/Electronic.html">Electronics</a>
+          <a href="/All_Product.html">All Products</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-btn" aria-label="Account">
+            <i class="fas fa-user"></i>
+          </button>
+
+          <button class="icon-btn cart-btn" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge">2</span>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
+      </div>
+    </header>
 
-        <!-- DESKTOP CATEGORIES -->
-        <div class="categories desktop-menu">
-            <ul>
-                <li><a href="All_Product.html">All Products</a></li>
-                <li><a href="jewelery.html">Jewelery</a></li>
-                <li><a href="Electronic.html">Electronic</a></li>
-                <li><a href="WomenClothes.html">Women Clothes</a></li>
-            </ul>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">New Collection 2024</p>
+        <h1 class="hero-title">Shine Beyond<br /><em>Ordinary</em></h1>
+        <p class="hero-sub">
+          Elegant jewelry, stylish outfits and everything your family needs —
+          crafted for those who refuse to blend in.
+        </p>
+        <div class="hero-btns">
+          <a href="/All_Product.html" class="btn-primary"
+            >Shop New Collection</a
+          >
+          <a href="/All_Product.html" class="btn-ghost">Explore All</a>
         </div>
-
-        <!-- DESKTOP RIGHT SIDE -->
-        <div class="cart-nav desktop-menu">
-            <a href="#" class="cart-link" id="cartLink">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-badge" id="desktopCartBadge">0</span>
-            </a>
-            <a href="#">Login</a>
-            <a href="#" class="register-btn">Register</a>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">12K+</span
+            ><span class="stat-label">Happy Customers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">4.9★</span
+            ><span class="stat-label">Average Rating</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">500+</span
+            ><span class="stat-label">Products</span>
+          </div>
         </div>
-
-        <!-- MOBILE RIGHT SIDE -->
-        <div class="mobile-nav">
-            <!-- Cart -->
-            <a href="#" class="mobile-cart" id="mobileCartLink">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-badge" id="mobileCartBadge">0</span>
-            </a>
-            <!-- Menu Button -->
-            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80"
+            alt="Model wearing jewelry"
+          />
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <!-- ================= MOBILE SIDEBAR ================= -->
-    <aside class="mobile-sidebar" id="mobileSidebar">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header">
-            <img src="assets/logo.png" alt="Logo" />
-            <button class="close-btn" id="closeBtn" aria-label="Close menu">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+      <div class="trust-item">
+        <i class="fas fa-truck"></i>
+        <div><strong>Free Shipping</strong><span>On orders over $99</span></div>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-rotate-left"></i>
+        <div>
+          <strong>Easy Returns</strong><span>30 days return policy</span>
         </div>
-
-        <!-- Sidebar Links -->
-        <div class="sidebar-links">
-            <a href="All_Product.html">
-                All Products
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-            <a href="jewelery.html">
-                Jewelery
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-            <a href="Electronic.html">
-                Electronic
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-            <a href="WomenClothes.html">
-                Women Clothes
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-shield-halved"></i>
+        <div>
+          <strong>Secure Payment</strong><span>100% secure checkout</span>
         </div>
-
-        <!-- Sidebar Account -->
-        <div class="sidebar-account">
-            <a href="#" class="sidebar-login">Login</a>
-            <a href="#" class="sidebar-register">Register</a>
-        </div>
-    </aside>
-
-    <!-- OVERLAY -->
-    <div class="menu-overlay" id="menuOverlay"></div>
-
-    <!-- ================= CART SIDEBAR ================= -->
-    <aside class="cart-sidebar" id="cartSidebar">
-        <div class="sidebar-header">
-            <h2>Shopping Cart <span id="cartHeaderCount">(0)</span></h2>
-            <button class="close-btn" id="closeCartBtn" aria-label="Close cart">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-
-        <div class="cart-body" id="cartItemsContainer">
-            <!-- Dynamic Cart Items -->
-        </div>
-
-        <div class="cart-footer">
-            <div class="cart-total-row">
-                <span>Total Amount:</span>
-                <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
-            </div>
-            <button class="checkout-btn" id="checkoutBtn">
-                Proceed to Checkout
-            </button>
-        </div>
-    </aside>
-
-    <div class="cart-overlay" id="cartOverlay"></div>
-
-    <div class="page-header">
-        <h1 class="page-title">All Products</h1>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-headset"></i>
+        <div><strong>24/7 Support</strong><span>We're here to help</span></div>
+      </div>
     </div>
 
-    <div class="Product-Container" data-category="all">
-    </div>
+    <!-- PROMOTION SECTION -->
+    <section class="promo-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Limited Time Deals</p>
+        <h2 class="section-title">Shop By Collection</h2>
+      </div>
+      <div class="promo-grid">
+        <div class="promo-card promo-card--jewelry">
+          <div class="promo-text">
+            <p class="promo-off">UP TO 30% OFF</p>
+            <h3>Jewelry Collection</h3>
+            <a href="/jewelery.html" class="promo-link"
+              >Shop Now <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&q=80"
+            alt="Jewelry"
+          />
+        </div>
+        <div class="promo-card promo-card--men">
+          <div class="promo-text">
+            <p class="promo-off">UP TO 40% OFF</p>
+            <h3>Men's Collection</h3>
+            <a href="/All_Product.html" class="promo-link"
+              >Shop Now <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=300&q=80"
+            alt="Men's fashion"
+          />
+        </div>
+        <div class="promo-card promo-card--women">
+          <div class="promo-text">
+            <p class="promo-off">UP TO 30% OFF</p>
+            <h3>Women's Collection</h3>
+            <a href="/WomenClothes.html" class="promo-link"
+              >Shop Now <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=300&q=80"
+            alt="Women's fashion"
+          />
+        </div>
+        <div class="promo-card promo-card--kids">
+          <div class="promo-text">
+            <p class="promo-off">UP TO 30% OFF</p>
+            <h3>Kids' Collection</h3>
+            <a href="/All_Product.html" class="promo-link"
+              >Shop Now <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=300&q=80"
+            alt="Kids' fashion"
+          />
+        </div>
+      </div>
+    </section>
 
-    <script src="app.js"></script>
-</body>
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Trending Now</p>
+        <h2 class="section-title">Check What We Have</h2>
+        <a href="https://dine-market.netlify.app/allProducts" class="view-all"
+          >View All <i class="fas fa-arrow-right"></i
+        ></a>
+        <div class="Product-Container"></div>
+      </div>
+    </section>
 
+    <!-- VINTAGE JEWELRY SECTION -->
+    <section class="vintage-section">
+      <div class="vintage-inner">
+        <div class="vintage-text">
+          <p class="section-eyebrow light">Our Signature</p>
+          <h2 class="vintage-title">
+            Unique & Authentic<br />Vintage Designer<br /><em>Jewellery</em>
+          </h2>
+          <p class="vintage-desc">
+            Each piece in our vintage collection is individually sourced and
+            authenticated — carrying decades of history and a craftsmanship that
+            mass production can never replicate. Wear a story, not just an
+            accessory.
+          </p>
+          <ul class="vintage-features">
+            <li>
+              <i class="fas fa-check-circle"></i> Individually authenticated
+              pieces
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Sourced from premium estates
+              worldwide
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Certificate of authenticity
+              included
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Lifetime craftsmanship
+              guarantee
+            </li>
+          </ul>
+          <a href="/All_Product.html" class="btn-primary"
+            >Explore Vintage Collection</a
+          >
+        </div>
+        <div class="vintage-gallery">
+          <div class="vgallery-main">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpCQ8g6QOPijLPGkaQI68K3y-DTqtvJ6XiAINgfACPerDZ387IPByXXiIA&s=10"
+              alt="Vintage ring"
+            />
+          </div>
+          <div class="vgallery-side">
+            <img
+              src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=300&q=80"
+              alt="Vintage necklace"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=300&q=80"
+              alt="Vintage bracelet"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section">
+      <div class="newsletter-inner">
+        <div class="newsletter-icon">
+          <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>
+          Get exclusive offers, new arrivals, and style tips delivered straight
+          to your inbox. No spam, unsubscribe anytime.
+        </p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Join 12,000+ subscribers · No spam ever</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-diamond">◆</span>
+            <span class="logo-text">LUXORA<small>STORE</small></span>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Pinterest"
+              ><i class="fab fa-pinterest-p"></i
+            ></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li>
+              <a href="/All_Product.html">All Products</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> devqai49@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

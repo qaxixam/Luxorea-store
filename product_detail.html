@@ -1,94 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details - FixIt Store</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- ================= NAVBAR ================= -->
-    <nav class="navbar">
-        <!-- LOGO -->
-        <div class="logo">
-            <a href="All_Product.html">
-                <img src="assets/logo.png" alt="Logo" />
-            </a>
-        </div>
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="/index.html" class="logo">
+          <span class="logo-diamond">◆</span>
+          <span class="logo-text">LUXORA<small>STORE</small></span>
+        </a>
 
-        <!-- DESKTOP CATEGORIES -->
-        <div class="categories desktop-menu">
-            <ul>
-                <li><a href="All_Product.html">All Products</a></li>
-                <li><a href="jewelery.html">Jewelery</a></li>
-                <li><a href="Electronic.html">Electronic</a></li>
-                <li><a href="WomenClothes.html">Women Clothes</a></li>
-            </ul>
-        </div>
+        <nav class="nav-links" id="navLinks">
+          <a href="WomenClothes.html">Female</a>
 
-        <!-- DESKTOP RIGHT SIDE -->
-        <div class="cart-nav desktop-menu">
-            <a href="#" class="cart-link" id="cartLink">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-badge" id="desktopCartBadge">0</span>
-            </a>
-            <a href="#">Login</a>
-            <a href="#" class="register-btn">Register</a>
-        </div>
+          <a href="/jewelery.html">Jewelery</a>
+          <a href="/Electronic.html">Electronics</a>
+          <a href="/All_Product.html">All Products</a>
+        </nav>
 
-        <!-- MOBILE RIGHT SIDE -->
-        <div class="mobile-nav">
-            <!-- Cart -->
-            <a href="#" class="mobile-cart" id="mobileCartLink">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-badge" id="mobileCartBadge">0</span>
-            </a>
-            <!-- Menu Button -->
-            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+        <div class="nav-actions">
+          <button class="icon-btn" aria-label="Account">
+            <i class="fas fa-user"></i>
+          </button>
+
+          <button class="icon-btn cart-btn" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge">2</span>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
-    </nav>
+      </div>
+    </header>
 
     <!-- ================= MOBILE SIDEBAR ================= -->
     <aside class="mobile-sidebar" id="mobileSidebar">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header">
-            <img src="assets/logo.png" alt="Logo" />
-            <button class="close-btn" id="closeBtn" aria-label="Close menu">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
+      <!-- Sidebar Header -->
+      <div class="sidebar-header">
+        <img src="assets/logo.png" alt="Logo" />
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
 
-        <!-- Sidebar Links -->
-        <div class="sidebar-links">
-            <a href="All_Product.html">
-                All Products
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-            <a href="jewelery.html">
-                Jewelery
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-            <a href="Electronic.html">
-                Electronic
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-            <a href="WomenClothes.html">
-                Women Clothes
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
-        </div>
+      <!-- Sidebar Links -->
+      <div class="sidebar-links">
+        <a href="All_Product.html">
+          All Products
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="jewelery.html">
+          Jewelery
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="Electronic.html">
+          Electronic
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="WomenClothes.html">
+          Women Clothes
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
 
-        <!-- Sidebar Account -->
-        <div class="sidebar-account">
-            <a href="#" class="sidebar-login">Login</a>
-            <a href="#" class="sidebar-register">Register</a>
-        </div>
+      <!-- Sidebar Account -->
+      <div class="sidebar-account">
+        <a href="#" class="sidebar-login">Login</a>
+        <a href="#" class="sidebar-register">Register</a>
+      </div>
     </aside>
 
     <!-- OVERLAY -->
@@ -96,42 +88,95 @@
 
     <!-- ================= CART SIDEBAR ================= -->
     <aside class="cart-sidebar" id="cartSidebar">
-        <div class="sidebar-header">
-            <h2>Shopping Cart <span id="cartHeaderCount">(0)</span></h2>
-            <button class="close-btn" id="closeCartBtn" aria-label="Close cart">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
+      <div class="sidebar-header">
+        <h2>Shopping Cart <span id="cartHeaderCount">(0)</span></h2>
+        <button class="close-btn" id="closeCartBtn" aria-label="Close cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
 
-        <div class="cart-body" id="cartItemsContainer">
-            <!-- Dynamic Cart Items -->
-        </div>
+      <div class="cart-body" id="cartItemsContainer">
+        <!-- Dynamic Cart Items -->
+      </div>
 
-        <div class="cart-footer">
-            <div class="cart-total-row">
-                <span>Total Amount:</span>
-                <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
-            </div>
-            <button class="checkout-btn" id="checkoutBtn">
-                Proceed to Checkout
-            </button>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total Amount:</span>
+          <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
         </div>
+        <button class="checkout-btn" id="checkoutBtn">
+          Proceed to Checkout
+        </button>
+      </div>
     </aside>
 
     <div class="cart-overlay" id="cartOverlay"></div>
 
     <main class="product-detail-container">
-        <a href="javascript:history.back()" class="back-btn" id="backBtn">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Products
-        </a>
+      <a href="javascript:history.back()" class="back-btn" id="backBtn">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Products
+      </a>
 
-        <div id="productDetailContent" class="product-detail-content">
-            <!-- Dynamic content loaded via app.js -->
-        </div>
+      <div id="productDetailContent" class="product-detail-content">
+        <!-- Dynamic content loaded via app.js -->
+      </div>
     </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-diamond">◆</span>
+            <span class="logo-text">LUXORA<small>STORE</small></span>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Pinterest"
+              ><i class="fab fa-pinterest-p"></i
+            ></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li>
+              <a href="/All_Product.html">All Products</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> devqai49@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
 
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>

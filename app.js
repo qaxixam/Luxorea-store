@@ -1,6 +1,7 @@
 // ============================================================
 // CART STATE - localStorage se cart load karo
 // ============================================================
+
 let cart = JSON.parse(localStorage.getItem('dinemarket_cart')) || [];
 
 // Products ko id se store karo taake onclick mein safely use ho sake
@@ -57,21 +58,30 @@ function updateCartUI() {
     let totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     // Badges
-    let desktopBadge = document.getElementById('desktopCartBadge');
-    let mobileBadge = document.getElementById('mobileCartBadge');
-    let headerCount = document.getElementById('cartHeaderCount');
-    let totalEl = document.getElementById('cartTotalPrice');
+    // let desktopBadge = document.getElementById('desktopCartBadge');
+    // let mobileBadge = document.getElementById('mobileCartBadge');
+    // let headerCount = document.getElementById('cartHeaderCount');
+    // let totalEl = document.getElementById('cartTotalPrice');
 
-    if (desktopBadge) desktopBadge.textContent = totalItems;
-    if (mobileBadge) mobileBadge.textContent = totalItems;
-    if (headerCount) headerCount.textContent = `(${totalItems})`;
-    if (totalEl) totalEl.textContent = `$${totalPrice.toFixed(2)}`;
+    // if (desktopBadge) desktopBadge.textContent = totalItems;
+    // if (mobileBadge) mobileBadge.textContent = totalItems;
+    // if (headerCount) headerCount.textContent = `(${totalItems})`;
+    // if (totalEl) totalEl.textContent = `$${totalPrice.toFixed(2)}`;
 
-    // Badge hide karo agar 0 ho
-    [desktopBadge, mobileBadge].forEach(b => {
-        if (!b) return;
+    // // Badge hide karo agar 0 ho
+    // [desktopBadge, mobileBadge].forEach(b => {
+    //     if (!b) return;
+    //     b.style.display = totalItems > 0 ? 'flex' : 'none';
+    // });
+    document.querySelectorAll('.cart-badge').forEach(b => {
+        b.textContent = totalItems;
         b.style.display = totalItems > 0 ? 'flex' : 'none';
     });
+
+    let headerCount = document.getElementById('cartHeaderCount');
+    let totalEl = document.getElementById('cartTotalPrice');
+    if (headerCount) headerCount.textContent = `(${totalItems})`;
+    if (totalEl) totalEl.textContent = `$${totalPrice.toFixed(2)}`;
 }
 
 // Cart items render karo inside sidebar
@@ -323,7 +333,7 @@ window.changeMainImage = function (src, element) {
 // MOBILE MENU TOGGLE
 // ============================================================
 function initMobileMenu() {
-    let menuBtn = document.getElementById('menuBtn');
+    let menuBtn = document.getElementById('hamburger');
     let closeBtn = document.getElementById('closeBtn');
     let mobileSidebar = document.getElementById('mobileSidebar');
     let menuOverlay = document.getElementById('menuOverlay');
@@ -354,6 +364,8 @@ function initCartSidebar() {
     let closeCartBtn = document.getElementById('closeCartBtn');
     let cartOverlay = document.getElementById('cartOverlay');
     let checkoutBtn = document.getElementById('checkoutBtn');
+    const cartBtn = document.querySelector('.cart-btn');
+    if (cartBtn) cartBtn.addEventListener('click', openCartSidebar);
 
     if (cartLink) cartLink.addEventListener('click', e => { e.preventDefault(); openCartSidebar(); });
     if (mobileCartLink) mobileCartLink.addEventListener('click', e => { e.preventDefault(); openCartSidebar(); });
@@ -369,6 +381,7 @@ function initCartSidebar() {
             window.location.href = 'checkout.html';
         });
     }
+
 }
 
 // ============================================================
